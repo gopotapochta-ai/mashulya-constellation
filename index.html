@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080b20">
+  <meta name="description" content="Личная карта звёзд для Машули.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>Созвездие для неё</title>
+</head>
+<body>
+  <div class="sky-world">
+    <div class="dust" aria-hidden="true"></div>
+
+    <header class="sky-header">
+      <a class="sky-mark" href="#top" aria-label="Вернуться к началу">
+        <span class="sky-mark-glyph">✦</span>
+        <span>Личная карта неба</span>
+      </a>
+      <div class="header-actions">
+        <button class="install-button" id="install-button" type="button" hidden>Добавить на экран</button>
+        <span class="night-status"><span class="status-star" aria-hidden="true"></span><span id="local-time">НОЧЬ / СВЯЗЬ ЕСТЬ</span></span>
+      </div>
+    </header>
+
+    <main>
+      <section class="opening" id="top" aria-labelledby="opening-title">
+        <div class="opening-copy">
+          <p class="chapter-label">КАРТА № 25 / ОТКРЫТА СЕГОДНЯ</p>
+          <h1 id="opening-title">В твою ночь<br><em>небо стало добрее.</em></h1>
+          <p class="opening-text">Я собрала здесь маленькое созвездие из семи звёзд. В каждой спрятана одна причина, почему рядом с тобой мир становится заметно лучше.</p>
+          <div class="opening-actions">
+            <button class="glow-button" id="begin-button" type="button">Открыть созвездие <span aria-hidden="true">↓</span></button>
+            <span class="quiet-note">Можно смотреть медленно. Ночь никуда не торопится.</span>
+          </div>
+        </div>
+
+        <div class="opening-orbit" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="orbit orbit-three"></div>
+          <span class="orbit-star orbit-star-one">✦</span>
+          <span class="orbit-star orbit-star-two">✦</span>
+          <span class="orbit-star orbit-star-three">✦</span>
+          <div class="orbit-core"><span>25</span><small>лет света<br>и характера</small></div>
+        </div>
+      </section>
+
+      <section class="map-section" id="map" aria-labelledby="map-title">
+        <div class="section-line"><span>КАРТА НОЧНОГО НЕБА</span><span id="star-count">0 / 7 ОТКРЫТО</span></div>
+        <div class="map-heading">
+          <div><p class="chapter-label">ЧАСТЬ ПЕРВАЯ / ТЕ, КТО СИЯЮТ</p><h2 id="map-title">Собери<br><em>своё созвездие.</em></h2></div>
+          <p>Нажми на любую звезду. Каждая откроет послание, которое нельзя увидеть в обычном небе.</p>
+        </div>
+
+        <div class="sky-map-frame">
+          <div class="map-coordinates" aria-hidden="true"><span>α 25° 08′</span><span>β 08° 05′</span></div>
+          <div class="sky-map" id="sky-map" aria-label="Интерактивная карта из семи звёзд">
+            <svg class="constellation-lines" id="constellation-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
+            <div class="map-halo" aria-hidden="true"></div>
+            <div class="map-center" aria-hidden="true"><span>25</span><small>сияние<br>подтверждено</small></div>
+            <div class="star-field" id="star-field"></div>
+            <span class="map-compass" aria-hidden="true">СЕВЕР ↑</span>
+            <span class="map-scale" aria-hidden="true">0 — 5 — 10 лет света</span>
+          </div>
+        </div>
+
+        <p class="map-help" id="map-help">Выбери первую звезду — остальные уже знают дорогу.</p>
+        <article class="message-panel" id="message-panel" hidden aria-live="polite">
+          <div class="message-topline"><span id="message-kicker">ЗВЕЗДА 01</span><button class="text-button" id="message-close" type="button">к карте</button></div>
+          <h3 id="message-title"></h3>
+          <p id="message-text"></p>
+          <div class="message-sign">✦</div>
+        </article>
+      </section>
+
+      <section class="finale" id="finale" hidden aria-labelledby="final-title">
+        <figure class="finale-photo">
+          <img src="photo_2026-08-06_00-04-33.jpg" alt="Машуля с букетом роз" loading="eager" fetchpriority="high">
+          <figcaption>ОДНА ОСОБЕННАЯ ЗВЕЗДА</figcaption>
+        </figure>
+        <div class="finale-copy">
+          <div class="finale-stars" aria-hidden="true">✦ &nbsp; ✦ &nbsp; ✦</div>
+          <p class="chapter-label">ПОСЛЕДНЯЯ ЗВЕЗДА / ТОЛЬКО ДЛЯ ТЕБЯ</p>
+          <h2 id="final-title">С днём рождения,<br><em id="final-name">Легенда.</em></h2>
+          <p id="final-text">Пусть этот год будет щедрым на людей, рядом с которыми легко, на события, от которых загораются глаза, и на дни, которые хочется прожить ещё раз.</p>
+          <button class="outline-button" id="share-button" type="button">Отправить карту</button>
+          <span class="final-note">Эта карта открывается только в одну особенную ночь.</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="sky-footer"><span>СОСТАВЛЕНО ДЛЯ ОДНОЙ ОСОБЕННОЙ ДЕВУШКИ</span><span>ВИДИМОСТЬ: ОТЛИЧНАЯ</span></footer>
+  </div>
+
+  <audio id="background-music" src="music.mp3" loop preload="auto" autoplay></audio>
+  <button class="music-toggle" id="music-toggle" type="button" aria-label="Включить музыку"><span class="music-glyph" aria-hidden="true">♫</span><span id="music-label">включить музыку</span></button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
