@@ -1,0 +1,12 @@
+memory/
+.run-time/
+AGENTS*.md
+*.knowledge.db
+*.log
+.mcp-server.log
+.omp-memory-ready
+.last-launcher-status.json
+.env
+.env.*
+Thumbs.db
+.DS_Store
