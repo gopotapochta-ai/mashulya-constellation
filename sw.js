@@ -1,4 +1,4 @@
-const CACHE_NAME = "constellation-gift-v6";
+const CACHE_NAME = "constellation-gift-v7";
 const APP_SHELL = [
   "./",
   "./index.html",
